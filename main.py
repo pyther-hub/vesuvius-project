@@ -85,8 +85,7 @@ for fragment_id in [1, 2, 3]:
         elif CFG.metric_direction == "maximize":
             update_best = best_dice > best_score
 
-        torch.cuda.empty_cache()
-        gc.collect()
+        gc_collect()
 
         if update_best:
             print("------UPDATE BESTTT------")

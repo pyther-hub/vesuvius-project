@@ -175,3 +175,7 @@ def init_logger(log_file):
     handler2.setFormatter(Formatter("%(message)s"))
     logger.addHandler(handler1)
     logger.addHandler
+    
+def gc_collect():
+    gc.collect()
+    torch.cuda.empty_cache()
